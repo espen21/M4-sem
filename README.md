@@ -15,7 +15,7 @@ We must allocate new memory space and copy data for every new process. Threads o
 
 **3. In short, explain the many-to-one user level thread model. Also explain what happens if one of the threads makes a blocking system call in the many-to-one user level thread model.**
 
-In the many to one user level thread model, there is only one kernel thread, but mapped to it can be several user level threads. But, having only one kernel thread means that if one of the user level treads make a system call, it will block all other threads!
+In the many to one user level thread model, there is only one kernel thread, but mapped to it can be several user level threads. All management of the user lever threads are done in user space. But, having only one kernel thread means that if one of the user level treads make a system call, it will block all other threads!
 
 #### Need for synchronization
 **4. What is meant by an atomic operation? Give examples of non-atomic operations.**
