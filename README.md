@@ -150,7 +150,10 @@ A mutex lock is similar to a binary semaphore. It should have some sort of retai
 
 **13. What is the difference between a mutex lock and a semaphore?**
 
-A mutex lock is like a binary semaphore, meaning only one task at a time can be the owner. With counting semaphores there can be several threads in the critical section.
+A mutex lock is like a binary semaphore, meaning only one task at a time can be the owner. With counting semaphores there can be several threads in the critical section. The correct use of a semaphore is to signaling from one task to
+another.
+A mutex is meant to be taken and released, always in that order,
+by each task that uses the shared resource it protects.
 
 **14. When implementing semaphores and mutex locks, how can busy waiting be avoided?**
 
